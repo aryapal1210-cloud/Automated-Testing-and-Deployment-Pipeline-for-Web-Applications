@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+
+    <h1>Automated Testing & Deployment</h1>
+
+    <h2>Login</h2>
+
+    <label>Username:</label>
+    <input type="text" id="username">
+
+    <br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password">
+
+    <br><br>
+
+    <button onclick="login()">Login</button>
+
+    <p id="message"></p>
+
+    <script>
+        function login() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let message = document.getElementById("message");
+
+            if (username === "admin" && password === "1234") {
+                message.innerHTML = "Login Successful!";
+            } else {
+                message.innerHTML = "Invalid Username or Password";
+            }
+        }
+    </script>
+
+</body>
+</html>
